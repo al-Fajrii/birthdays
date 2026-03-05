@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Serif JP", sans-serif;
+  background: #fff;
+}
+
+/* page 1 */
+.Page1 {
+  display: flex;
+  background-image: url("./img/1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 50px;
+}
+
+#ucapan1,
+#ucapan2 {
+  font-size: 90px;
+  color: #feffd3;
+  font-family: "Noto Serif JP", serif;
+  animation: fadein 1s ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  margin: 0;
+  line-height: 0.9;
+  text-align: left;
+}
+
+#year {
+  color: #333;
+  font-size: 30px;
+  font-weight: bold;
+  animation: fadein 3s ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  margin: 20px 0;
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+}
+
+#umur {
+  color: #feffd3;
+  font-size: 130px;
+  font-family: "Ephesis", cursive;
+  animation: fadein 4s ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+
+.main-content {
+  align-self: flex-start;
+  margin-top: 50px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* page 2 */
+
+.img {
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.page2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.wrapper1 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll1 {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  animation: infiniteScroll1 30s linear infinite;
+  padding: 0 1rem;
+}
+
+@keyframes infiniteScroll1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-30rem * 7 - 1rem * 7));
+  }
+}
+
+#beautifull {
+  text-align: center;
+  font-size: 50px;
+  color: #333;
+  font-family: "Noto Serif JP", serif;
+  padding: 20px;
+}
+
+.page3 {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 96%;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafbe6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.letter {
+  max-width: 1000px;
+  padding: 20px;
+}
+
+#to-love {
+  font-size: 50px;
+  color: #333;
+  font-family: "Ephesis", cursive;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#pesan {
+  font-size: 25px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home {
+    padding: 20px;
+  }
+
+  .main-content {
+    margin-top: 20px;
+  }
+
+  #ucapan1,
+  #ucapan2 {
+    font-size: 50px;
+  }
+
+  #year {
+    font-size: 20px;
+    bottom: 120px;
+    left: 20px;
+  }
+
+  #umur {
+    font-size: 80px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  #beautifull {
+    font-size: 30px;
+  }
+
+  .letter {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
